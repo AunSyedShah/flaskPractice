@@ -20,7 +20,7 @@ def user(userName):
     """
     userName page
     """
-    return f"</title>{userName}</title>"
+    return f"<h1>Welcome {userName}</h1>"
 
 
 # redirect example
@@ -30,7 +30,8 @@ def admin():
     admin auth page
     """
     # url_for takes the name of view function to redirect
-    return redirect(url_for("home"))
+    # we can also provide arguments to url_for fucntion while redirect
+    return redirect(url_for("user", userName="Aun Syed Shah"))
 
 
 # statring point of app
