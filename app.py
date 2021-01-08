@@ -23,6 +23,16 @@ def user(userName):
     return f"</title>{userName}</title>"
 
 
+# redirect example
+@app.route("/admin")
+def admin():
+    """
+    admin auth page
+    """
+    # url_for takes the name of view function to redirect
+    return redirect(url_for("home"))
+
+
 # statring point of app
 if __name__ == "__name__":
     app.run()
