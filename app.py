@@ -12,7 +12,11 @@ def home():
     """
     home route
     """
-    return render_template("base.html")
+    numbers_list = [2, 3, 4, 5, 6]
+    context = {
+        "numbers": numbers_list
+    }
+    return render_template("base.html", context=context)
 
 
 # statring point of app
